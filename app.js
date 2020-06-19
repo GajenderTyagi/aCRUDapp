@@ -15,6 +15,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 // Set up mongoose connection
+const DBUSER = process.env.DBUSER;
+const DBPWD = process.env.DBPWD;
 //let dev_db_url = "mongodb+srv://GajenderTyagi:pixere123@cluster0-vv8kq.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority";
 const dev_db_url = `mongodb+srv://${DBUSER}:${DBPWD}@cluster0-vv8kq.gcp.mongodb.net/CRUDAPPDB?retryWrites=true&w=majority`;
 let mongoDB = process.env.MONGODB_URI || dev_db_url;
