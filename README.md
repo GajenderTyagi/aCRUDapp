@@ -5,7 +5,7 @@ a simple employee CRUD app
 
 <u>
 
- **CRUD API URL **
+ **CRUD API URL**
 
 1. http://localhost:1234/employee/test
 
