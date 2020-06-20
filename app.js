@@ -8,11 +8,12 @@ require('dotenv').config();
 
 // initialize our express app
 const app = express();
-app.use('/employee', employee);
 
 // body parser
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use('/employee', employee);
 
 // Set up mongoose connection
 const DBUSER = process.env.DBUSER;
